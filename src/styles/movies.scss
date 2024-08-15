@@ -12,6 +12,10 @@
     }
 
     .wrapper {
+        /* Apply grid layout */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the min-width (200px) based on your design needs */
+        gap: 16px; /* Adjust the gap between items */
         padding: 0 6px;
         margin-bottom: 2rem;
     }
@@ -126,6 +130,7 @@
         width: 100%;
         height: auto;
     }
+
     .btn-star {
         width: 50px;
         margin: 0 5px;
@@ -135,6 +140,7 @@
             font-size: 25px;
         }        
     }
+
     button {
         display: block;
         width: 90%;
@@ -184,6 +190,9 @@
     text-align: center;
     background: transparent;
     border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &.opened {
         & + .hero-card {
@@ -192,7 +201,7 @@
     }
 
     &:hover { 
-        transform: scale(1.1); 
+        transform: scale(1.05); 
 
         .overlay {
             opacity: .8;
